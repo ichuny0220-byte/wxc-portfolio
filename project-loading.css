@@ -1,0 +1,12 @@
+.figma-figure.media-loading { position: relative; background: #edf4fb; }
+.figma-figure.media-loading::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(100deg, transparent 25%, rgba(255,255,255,.75) 50%, transparent 75%); background-size: 200% 100%; animation: image-shimmer 1.6s linear infinite; }
+.figma-figure.media-loading img { opacity: 0; }
+.figma-figure img { transition: opacity .25s ease; }
+.media-status { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 10px; color: #58759a; font: 13px/1.5 sans-serif; pointer-events: none; }
+.media-status::before { content: ''; width: 16px; height: 16px; border: 2px solid #ccdaeb; border-top-color: #5382bf; border-radius: 50%; animation: image-spin .8s linear infinite; }
+.figma-figure.media-error { position: relative; min-height: 140px; }
+.media-error .media-status { pointer-events: auto; cursor: pointer; }
+.media-error .media-status::before { display: none; }
+@keyframes image-shimmer { to { background-position: -200% 0; } }
+@keyframes image-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .figma-figure.media-loading::after, .media-status::before { animation: none; } .figma-figure img { transition: none; } }
