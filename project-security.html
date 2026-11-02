@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport">
+  <title>
+   王雪纯 | 风险管控平台案例
+  </title>
+  <link href="./styles.css?v=20261024c" rel="stylesheet">
+ </head>
+ <body>
+  <header aria-label="主导航" class="site-header">
+   <a aria-label="返回首页" class="brand" href="index.html#home">
+    <span aria-hidden="true" class="brand-dots">
+     <i>
+     </i>
+     <i>
+     </i>
+    </span>
+    <span>
+     WXC Portfolio
+    </span>
+   </a>
+   <nav aria-label="快速导航" class="quick-nav">
+    <a href="index.html#home">
+     首页
+    </a>
+    <a href="index.html#profile">
+     个人介绍
+    </a>
+    <div class="nav-item has-dropdown">
+     <a href="index.html#catalog">
+      B 端产品
+      <span class="nav-caret">▾</span>
+     </a>
+     <div class="nav-panel">
+      <a class="nav-card" href="project-regulatory.html">
+       <span class="nav-card-tag">
+        B 端 · 监管科技
+       </span>
+       <strong>
+        集团监管报送平台
+       </strong>
+       <p>
+        流程重构 + AI 辅助填报的多角色协同平台
+       </p>
+      </a>
+      <a class="nav-card is-here" href="project-security.html">
+       <span class="nav-card-tag">
+        B 端 · 信息安全治理
+       </span>
+       <strong>
+        风险管控平台
+       </strong>
+       <p>
+        GRC 三域 · 三道防线 · 风险闭环治理
+       </p>
+      </a>
+     </div>
+    </div>
+    <div class="nav-item has-dropdown">
+     <a href="index.html#catalog">
+      C 端产品
+      <span class="nav-caret">▾</span>
+     </a>
+     <div class="nav-panel">
+      <a class="nav-card" href="project-bank.html">
+       <span class="nav-card-tag">
+        C 端 · 金融科技
+       </span>
+       <strong>
+        银行 C 端 App 体验升级
+       </strong>
+       <p>
+        智能调度 · 快捷服务双场景创新
+       </p>
+      </a>
+     </div>
+    </div>
+    <a class="contact-trigger" href="index.html#contact">
+     联系我
+    </a>
+   </nav>
+  </header>
+  <main>
+   <section aria-label="风险管控平台案例" class="project-screen figma-case security-screen" id="project-security">
+    <aside aria-label="案例导航" class="project-sidebar">
+     <a aria-label="返回目录" class="back-link" href="index.html#catalog">
+      <svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
+       <path d="M19 12H5M12 19l-7-7 7-7">
+       </path>
+      </svg>
+      返回目录
+     </a>
+     <nav aria-label="案例目录" class="project-toc">
+      <a href="#security-hero">项目封面</a>
+      <span class="toc-part">Part 01 · 产品层</span>
+      <a href="#security-lines">GRC 三条主线</a>
+      <a href="#security-context">项目背景与角色</a>
+      <a href="#security-goals">设计目标</a>
+      <a href="#security-problem">问题与改版策略</a>
+      <a href="#security-persona">用户画像</a>
+      <span class="toc-part">Part 02 · 框架层</span>
+      <a href="#security-goalmap">产品目标解析</a>
+      <a href="#security-defense">三道防线权限模型</a>
+      <a href="#security-ia">产品结构框架</a>
+      <a href="#security-journey">产品体验地图</a>
+      <a href="#security-flow">流程与状态设计</a>
+      <span class="toc-part">Part 03 · 交互层</span>
+      <a href="#security-home">首页设计决策</a>
+      <a href="#security-dash">集团风险大盘</a>
+      <a href="#security-company">专业公司风险全景</a>
+      <a href="#security-ai">AI 合规助理</a>
+      <a href="#security-task">任务规划与拆解</a>
+      <a href="#security-egress">数据外发与审批</a>
+      <a href="#security-value">结果与价值</a>
+     </nav>
+     <a aria-label="联系我" class="back-link contact-trigger" href="index.html#catalog">
+      联系我
+     </a>
+    </aside>
+    <p class="figma-swipe-hint security-swipe-hint">轻点图片可全屏放大查看</p>
+    <article aria-label="风险管控平台项目内容" class="project-artboard figma-artboard security-artboard">
+      <figure aria-label="项目封面" class="figma-figure security-figure" id="security-hero">
+       <img alt="风险管控平台：可视化、闭环、可配置的集团 GRC 治理平台（封面，含脱敏说明）" decoding="async" fetchpriority="high" height="817" loading="eager" src="assets/security-01.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">项目封面：可视化、闭环、可配置的集团 GRC 治理平台</figcaption>
+      </figure>
+      <figure aria-label="Part 01 产品层" class="figma-figure security-figure" id="security-part1">
+       <img alt="Part 01 · 产品层" decoding="async" height="550" loading="eager" src="assets/security-02.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">Part 01 · 产品层</figcaption>
+      </figure>
+      <figure aria-label="GRC 三条主线" class="figma-figure security-figure" id="security-lines">
+       <img alt="GRC 三条主线：治理、风险、合规，一屏看全 / 唯一台账 / 条文映射" decoding="async" height="905" loading="eager" src="assets/security-03.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">GRC 三条主线：治理 Governance、风险 Risk、合规 Compliance</figcaption>
+      </figure>
+      <figure aria-label="项目背景与角色" class="figma-figure security-figure" id="security-context">
+       <img alt="项目背景与角色：背景挑战、平台目标与 GRC 治理实践五环" decoding="async" height="907" loading="lazy" src="assets/security-04.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">项目背景与角色：背景挑战、平台目标与 GRC 治理实践</figcaption>
+      </figure>
+      <figure aria-label="设计目标" class="figma-figure security-figure" id="security-goals">
+       <img alt="设计目标：统一视角、明确职责、沉淀数据的三项目标" decoding="async" height="907" loading="lazy" src="assets/security-05.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">设计目标</figcaption>
+      </figure>
+      <figure aria-label="问题定义与改版策略" class="figma-figure security-figure" id="security-problem">
+       <img alt="问题定义与改版策略：六组 Before 与 After 对比" decoding="async" height="907" loading="lazy" src="assets/security-06.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">问题定义与改版策略：Before / After 对比</figcaption>
+      </figure>
+      <figure aria-label="用户画像" class="figma-figure security-figure" id="security-persona">
+       <img alt="用户画像：四类角色画像与四套默认首页" decoding="async" height="907" loading="lazy" src="assets/security-07.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">用户画像与四套默认首页</figcaption>
+      </figure>
+      <figure aria-label="Part 02 框架层" class="figma-figure security-figure" id="security-part2">
+       <img alt="Part 02 · 框架层" decoding="async" height="550" loading="lazy" src="assets/security-08.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">Part 02 · 框架层</figcaption>
+      </figure>
+      <figure aria-label="产品目标解析" class="figma-figure security-figure" id="security-goalmap">
+       <img alt="产品目标解析：Why、What、How、Not 与一个平台三种视角" decoding="async" height="907" loading="lazy" src="assets/security-09.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">产品目标解析：Why / What / How / Not</figcaption>
+      </figure>
+      <figure aria-label="三道防线权限模型" class="figma-figure security-figure" id="security-defense">
+       <img alt="GRC 三道防线：权限模型与平台管理员配置" decoding="async" height="904" loading="lazy" src="assets/security-10.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">GRC 三道防线权限模型</figcaption>
+      </figure>
+      <figure aria-label="产品结构框架" class="figma-figure security-figure" id="security-ia">
+       <img alt="产品结构框架：五大模块与默认落地页" decoding="async" height="907" loading="lazy" src="assets/security-11.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">产品结构框架</figcaption>
+      </figure>
+      <figure aria-label="产品体验地图" class="figma-figure security-figure" id="security-journey">
+       <img alt="产品体验地图：从集团到专业公司的体验旅程" decoding="async" height="907" loading="lazy" src="assets/security-12.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">产品体验地图</figcaption>
+      </figure>
+      <figure aria-label="风险治理流程与状态设计" class="figma-figure security-figure" id="security-flow">
+       <img alt="风险治理流程与状态设计：二维定级、SLA 推进与五步流程" decoding="async" height="907" loading="lazy" src="assets/security-13.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">风险治理流程与状态设计</figcaption>
+      </figure>
+      <figure aria-label="Part 03 交互层" class="figma-figure security-figure" id="security-part3">
+       <img alt="Part 03 · 交互层" decoding="async" height="550" loading="lazy" src="assets/security-14.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">Part 03 · 交互层</figcaption>
+      </figure>
+      <figure aria-label="首页设计决策" class="figma-figure security-figure" id="security-home">
+       <img alt="首页设计决策：单一主数字、短板置顶、对比即行动" decoding="async" height="907" loading="lazy" src="assets/security-15.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">首页设计决策</figcaption>
+      </figure>
+      <figure aria-label="集团风险大盘" class="figma-figure security-figure" id="security-dash">
+       <img alt="集团风险大盘：一屏掌握安全水位、趋势与风险联动、横向对比" decoding="async" height="982" loading="lazy" src="assets/security-16.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">集团风险大盘</figcaption>
+      </figure>
+      <figure aria-label="专业公司风险全景图" class="figma-figure security-figure" id="security-company">
+       <img alt="专业公司风险全景图" decoding="async" height="865" loading="lazy" src="assets/security-17.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">专业公司风险全景图</figcaption>
+      </figure>
+      <figure aria-label="AI 合规助理" class="figma-figure security-figure" id="security-ai">
+       <img alt="AI 合规助理：合规映射与风险定级的四项能力" decoding="async" height="912" loading="lazy" src="assets/security-18.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">AI 合规助理</figcaption>
+      </figure>
+      <figure aria-label="任务规划与目标拆解" class="figma-figure security-figure" id="security-task">
+       <img alt="任务规划与目标拆解" decoding="async" height="883" loading="lazy" src="assets/security-19.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">任务规划与目标拆解</figcaption>
+      </figure>
+      <figure aria-label="数据外发与合规审批" class="figma-figure security-figure" id="security-egress">
+       <img alt="数据外发与合规审批" decoding="async" height="922" loading="lazy" src="assets/security-20.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">数据外发与合规审批</figcaption>
+      </figure>
+      <figure aria-label="结果与价值" class="figma-figure security-figure" id="security-value">
+       <img alt="结果与价值：绩效活跃、整合提效、统一量化与审计提效四项指标" decoding="async" height="779" loading="lazy" src="assets/security-21.webp?v=20261024d" width="1436">
+       <figcaption class="figma-caption security-caption">结果与价值</figcaption>
+      </figure>
+    </article>
+    <div aria-label="案例跳转" class="project-jump">
+     <a aria-label="上一个" href="project-regulatory.html">
+      <svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+       <path d="M12 19V5M5 12l7-7 7 7">
+       </path>
+      </svg>
+     </a>
+     <a aria-label="下一个" href="project-bank.html">
+      <svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24">
+       <path d="M12 5v14M5 12l7 7 7-7">
+       </path>
+      </svg>
+     </a>
+    </div>
+   </section>
+  </main>
+  <div aria-hidden="true" class="contact-modal" id="contact-modal">
+   <div class="contact-modal-backdrop" data-contact-close>
+   </div>
+   <div aria-label="联系我" aria-modal="true" class="contact-modal-panel" role="dialog">
+    <div class="modal-heading">
+     <h3>
+      联系我
+     </h3>
+     <button aria-label="关闭" class="contact-modal-close" data-contact-close type="button">
+      <svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
+       <path d="M18 6L6 18M6 6l12 12">
+       </path>
+      </svg>
+     </button>
+    </div>
+    <div class="modal-body">
+     <p>
+      欢迎通过电话或邮件联系我，期待交流。
+     </p>
+     <div class="modal-contact-list">
+      <a class="modal-contact-item" href="tel:18221552320">
+       <span>
+        电话
+       </span>
+       <strong>
+        182 2155 2320
+       </strong>
+      </a>
+      <a class="modal-contact-item" href="mailto:ichuny@163.com">
+       <span>
+        邮箱
+       </span>
+       <strong>
+        ichuny@163.com
+       </strong>
+      </a>
+      <div class="modal-contact-item">
+       <span>
+        城市
+       </span>
+       <strong>
+        上海
+       </strong>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src="./script.js?v=20261024c">
+  </script>
+ </body>
+</html>
