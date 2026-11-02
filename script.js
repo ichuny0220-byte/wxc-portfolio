@@ -262,7 +262,7 @@ const closeLb = () => {
 };
 document.querySelectorAll(".figma-figure img").forEach((img) => {
   img.addEventListener("click", () => {
-    lbImg.src = img.currentSrc || img.src;
+    lbImg.src = img.src;
     lbOverlay.classList.add("is-open");
     lbOverlay.setAttribute("aria-hidden", "false");
     document.body.classList.add("is-modal-open");
@@ -278,6 +278,22 @@ window.addEventListener("keydown", (event) => {
   const heroVideo = document.querySelector(".hero-bg-video");
   if (heroVideo && window.matchMedia("(max-width: 900px)").matches) {
     heroVideo.remove();
+  } else if (heroVideo) {
+    // Wait until the first paint and essential content have loaded.
+    const startVideo = () => {
+      heroVideo.querySelectorAll("source[data-src]").forEach(source => {
+        source.src = source.dataset.src;
+      });
+      heroVideo.load();
+      const play = heroVideo.play();
+      if (play) play.catch(() => {});
+    };
+    const schedule = () => {
+      if ("requestIdleCallback" in window) requestIdleCallback(startVideo, { timeout: 4000 });
+      else setTimeout(startVideo, 2500);
+    };
+    if (document.readyState === "complete") schedule();
+    else window.addEventListener("load", schedule, { once: true });
   }
 })();
 
