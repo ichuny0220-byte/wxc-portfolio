@@ -3,7 +3,7 @@
     entries.forEach(entry => {
       if (entry.isIntersecting) { entry.target.loading = 'eager'; observer.unobserve(entry.target); }
     });
-  }, { rootMargin: '1600px 0px' }) : null;
+  }, { rootMargin: '900px 0px' }) : null;
   document.querySelectorAll('.figma-figure img').forEach(img => {
     const figure = img.closest('figure');
     const status = document.createElement('span');

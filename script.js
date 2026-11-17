@@ -273,27 +273,65 @@ window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeLb();
 });
 
-/* 手机端移除视频背景：部分国产浏览器会按 <video> 注入“网盘/播放器”浮层，遮挡首屏文案 */
+/* Filter cards without changing their order or navigating away. */
+{
+  const filters = document.querySelector('.work-filters');
+  if (filters) {
+    const buttons = [...filters.querySelectorAll('[data-work-filter]')];
+    const cards = [...document.querySelectorAll('[data-work-category]')];
+    const select = button => {
+      const category = button.dataset.workFilter;
+      buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      cards.forEach(card => {
+        card.hidden = category !== 'all' && !card.dataset.workCategory.split(' ').includes(category);
+      });
+    };
+    buttons.forEach(button => button.addEventListener('click', () => select(button)));
+    select(buttons[0]);
+    filters.hidden = false;
+  }
+}
+
+/* Keep the hero video on every screen; offer a user gesture if autoplay is blocked. */
 (function () {
   const heroVideo = document.querySelector(".hero-bg-video");
-  if (heroVideo && window.matchMedia("(max-width: 900px)").matches) {
-    heroVideo.remove();
-  } else if (heroVideo) {
-    // Wait until the first paint and essential content have loaded.
+  if (heroVideo) {
+    heroVideo.muted = true;
+    heroVideo.playsInline = true;
+    const playButton = document.createElement('button');
+    playButton.className = 'hero-video-play';
+    playButton.type = 'button';
+    playButton.textContent = '播放首页视频';
+    playButton.hidden = true;
+    heroVideo.closest('.hero').appendChild(playButton);
+    const tryPlay = () => {
+      const promise = heroVideo.play();
+      if (promise) promise.catch(() => { playButton.hidden = false; });
+    };
+    playButton.addEventListener('click', tryPlay);
+    heroVideo.addEventListener('playing', () => {
+      playButton.hidden = true;
+      heroVideo.closest('.hero').classList.add('video-is-playing');
+    });
     const startVideo = () => {
+      if (heroVideo.querySelector('source[src]')) { tryPlay(); return; }
       heroVideo.querySelectorAll("source[data-src]").forEach(source => {
         source.src = source.dataset.src;
       });
       heroVideo.load();
-      const play = heroVideo.play();
-      if (play) play.catch(() => {});
+      tryPlay();
     };
-    const schedule = () => {
-      if ("requestIdleCallback" in window) requestIdleCallback(startVideo, { timeout: 4000 });
-      else setTimeout(startVideo, 2500);
-    };
-    if (document.readyState === "complete") schedule();
-    else window.addEventListener("load", schedule, { once: true });
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(entries => {
+        if (entries.some(entry => entry.isIntersecting)) {
+          observer.disconnect();
+          startVideo();
+        }
+      }, { threshold: 0.2 });
+      observer.observe(heroVideo);
+    } else {
+      startVideo();
+    }
   }
 })();
 
