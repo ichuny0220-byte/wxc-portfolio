@@ -6,8 +6,8 @@
   <title>
    王雪纯 | AI监管合规助手案例
   </title>
-<link rel="preload" as="image" href="./assets/ai-compliance-1118-01-mobile.jpg" media="(max-width: 767px)" fetchpriority="high">
-<link rel="preload" as="image" href="./assets/ai-compliance-1118-01.jpg" media="(min-width: 768px)" fetchpriority="high">
+<link rel="preload" as="image" href="./assets/ai-compliance-1118b-01-mobile.jpg" media="(max-width: 767px)" fetchpriority="high">
+<link rel="preload" as="image" href="./assets/ai-compliance-1118b-01.jpg" media="(min-width: 768px)" fetchpriority="high">
 
   <link href="./styles.css?v=20261118" rel="stylesheet">
  <link href="./project-loading.css?v=20261118" rel="stylesheet">
@@ -81,6 +81,19 @@
       </a>
      </div>
     </div>
+    <div class="nav-item has-dropdown">
+     <a class="is-active" href="project-ai-compliance.html" aria-current="page">
+      AIGC 产品
+      <span class="nav-caret">▾</span>
+     </a>
+     <div class="nav-panel">
+      <a class="nav-card is-here" href="project-ai-compliance.html" aria-current="page">
+       <span class="nav-card-tag">AIGC · 监管合规</span>
+       <strong>AI监管合规助手</strong>
+       <p>外规解析 · 制度差距分析 · 人机协同合规闭环</p>
+      </a>
+     </div>
+    </div>
     <a class="contact-trigger" href="index.html#contact">
      联系我
     </a>
@@ -103,10 +116,12 @@
       <a href="#ai-workflow">业务流程重构</a>
       <a href="#ai-collaboration">人机协同设计</a>
       <a href="#ai-thresholds">AI置信度与阈值设计</a>
-      <a href="#ai-comparison">内外规关联与差距分析</a>
       <a href="#ai-review">人工审核与打标</a>
       <a href="#ai-remediation">合规整改任务闭环</a>
-      <a href="#ai-interface">界面展示</a>
+      <a href="#ai-interface">主要界面与入口</a>
+      <a href="#ai-parsing">界面展示：外规解析</a>
+      <a href="#ai-association">界面展示：内外规关联</a>
+      <a href="#ai-comparison">界面展示：差距定位</a>
       <a href="#ai-value">设计价值与总结</a>
      </nav>
      <a aria-label="联系我" class="back-link contact-trigger" href="index.html#catalog">
@@ -117,48 +132,56 @@
     <article class="project-artboard figma-artboard" aria-label="AI监管合规助手项目内容">
       <h1 class="case-accessible-title">AI监管合规助手</h1>
       <figure class="figma-figure" id="ai-hero" aria-label="项目概览">
-       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118-01-mobile.jpg"><img src="./assets/ai-compliance-1118-01.jpg" width="2000" height="1125" alt="AI监管合规助手：从监管文件智能解析到合规整改闭环" loading="eager" fetchpriority="high" decoding="async"></picture>
-       <figcaption class="figma-caption">AI监管合规助手：从监管文件智能解析到合规整改闭环</figcaption>
+       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118b-01-mobile.jpg"><img src="./assets/ai-compliance-1118b-01.jpg" width="2000" height="1125" alt="从监管文件智能解析到合规整改闭环" loading="eager" fetchpriority="high" decoding="async"></picture>
+       <figcaption class="figma-caption">从监管文件智能解析到合规整改闭环</figcaption>
       </figure>
       <figure class="figma-figure" id="ai-background" aria-label="项目背景与业务痛点">
-       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118-02-mobile.jpg"><img src="./assets/ai-compliance-1118-02.jpg" width="2000" height="1125" alt="监管文件处理、匹配、协作与追溯的业务痛点" loading="lazy" decoding="async"></picture>
-       <figcaption class="figma-caption">监管文件处理、匹配、协作与追溯的业务痛点</figcaption>
+       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118b-02-mobile.jpg"><img src="./assets/ai-compliance-1118b-02.jpg" width="2000" height="1125" alt="监管文件处理、匹配、协作与追溯" loading="lazy" decoding="async"></picture>
+       <figcaption class="figma-caption">监管文件处理、匹配、协作与追溯</figcaption>
       </figure>
       <figure class="figma-figure" id="ai-capabilities" aria-label="四大能力入口">
-       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118-03-mobile.jpg"><img src="./assets/ai-compliance-1118-03.jpg" width="2000" height="1125" alt="外规解析、外规解读、内外规关联和制度差距分析" loading="lazy" decoding="async"></picture>
-       <figcaption class="figma-caption">外规解析、外规解读、内外规关联和制度差距分析</figcaption>
+       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118b-03-mobile.jpg"><img src="./assets/ai-compliance-1118b-03.jpg" width="2000" height="1125" alt="外规解析、外规解读、内外规关联、制度差距分析" loading="lazy" decoding="async"></picture>
+       <figcaption class="figma-caption">外规解析、外规解读、内外规关联、制度差距分析</figcaption>
       </figure>
       <figure class="figma-figure" id="ai-workflow" aria-label="业务流程重构">
-       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118-04-mobile.jpg"><img src="./assets/ai-compliance-1118-04.jpg" width="2000" height="1125" alt="四项 AI 能力贯穿合规流程" loading="lazy" decoding="async"></picture>
-       <figcaption class="figma-caption">四项 AI 能力贯穿合规流程</figcaption>
+       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118b-04-mobile.jpg"><img src="./assets/ai-compliance-1118b-04.jpg" width="2000" height="1125" alt="让复杂合规串联清晰路径" loading="lazy" decoding="async"></picture>
+       <figcaption class="figma-caption">让复杂合规串联清晰路径</figcaption>
       </figure>
       <figure class="figma-figure" id="ai-collaboration" aria-label="人机协同设计">
-       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118-05-mobile.jpg"><img src="./assets/ai-compliance-1118-05.jpg" width="2000" height="1125" alt="AI 辅助判断，人工掌握决策" loading="lazy" decoding="async"></picture>
-       <figcaption class="figma-caption">AI 辅助判断，人工掌握决策</figcaption>
+       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118b-05-mobile.jpg"><img src="./assets/ai-compliance-1118b-05.jpg" width="2000" height="1125" alt="AI辅助判断，人工掌握决策" loading="lazy" decoding="async"></picture>
+       <figcaption class="figma-caption">AI辅助判断，人工掌握决策</figcaption>
       </figure>
       <figure class="figma-figure" id="ai-thresholds" aria-label="AI置信度与阈值设计">
-       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118-06-mobile.jpg"><img src="./assets/ai-compliance-1118-06.jpg" width="2000" height="1125" alt="匹配置信度分布和阈值策略示例" loading="lazy" decoding="async"></picture>
-       <figcaption class="figma-caption">匹配置信度分布和阈值策略示例</figcaption>
-      </figure>
-      <figure class="figma-figure" id="ai-comparison" aria-label="内外规关联与差距分析">
-       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118-07-mobile.jpg"><img src="./assets/ai-compliance-1118-07.jpg" width="2000" height="1125" alt="关联依据、差距定位与后续整改" loading="lazy" decoding="async"></picture>
-       <figcaption class="figma-caption">关联依据、差距定位与后续整改</figcaption>
+       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118b-06-mobile.jpg"><img src="./assets/ai-compliance-1118b-06.jpg" width="2000" height="1125" alt="匹配置信度分布与阈值策略" loading="lazy" decoding="async"></picture>
+       <figcaption class="figma-caption">匹配置信度分布与阈值策略</figcaption>
       </figure>
       <figure class="figma-figure" id="ai-review" aria-label="人工审核与打标">
-       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118-08-mobile.jpg"><img src="./assets/ai-compliance-1118-08.jpg" width="2000" height="1125" alt="匹配结果审核、AI 匹配解析与人工修正" loading="lazy" decoding="async"></picture>
-       <figcaption class="figma-caption">匹配结果审核、AI 匹配解析与人工修正</figcaption>
+       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118b-07-mobile.jpg"><img src="./assets/ai-compliance-1118b-07.jpg" width="2000" height="1125" alt="匹配结果审核与人工修正" loading="lazy" decoding="async"></picture>
+       <figcaption class="figma-caption">匹配结果审核与人工修正</figcaption>
       </figure>
       <figure class="figma-figure" id="ai-remediation" aria-label="合规整改任务闭环">
-       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118-09-mobile.jpg"><img src="./assets/ai-compliance-1118-09.jpg" width="2000" height="1125" alt="从发现缺口到整改落地" loading="lazy" decoding="async"></picture>
+       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118b-08-mobile.jpg"><img src="./assets/ai-compliance-1118b-08.jpg" width="2000" height="1125" alt="从发现缺口到整改落地" loading="lazy" decoding="async"></picture>
        <figcaption class="figma-caption">从发现缺口到整改落地</figcaption>
       </figure>
-      <figure class="figma-figure" id="ai-interface" aria-label="界面展示">
-       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118-10-mobile.jpg"><img src="./assets/ai-compliance-1118-10.jpg" width="2000" height="1125" alt="AI 合规助手界面和主要功能入口" loading="lazy" decoding="async"></picture>
-       <figcaption class="figma-caption">AI 合规助手界面和主要功能入口</figcaption>
+      <figure class="figma-figure" id="ai-interface" aria-label="主要界面与入口">
+       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118b-09-mobile.jpg"><img src="./assets/ai-compliance-1118b-09.jpg" width="2000" height="1125" alt="AI合规助手功能入口与主界面" loading="lazy" decoding="async"></picture>
+       <figcaption class="figma-caption">AI合规助手功能入口与主界面</figcaption>
+      </figure>
+      <figure class="figma-figure" id="ai-parsing" aria-label="界面展示：外规解析">
+       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118b-10-mobile.jpg"><img src="./assets/ai-compliance-1118b-10.jpg" width="2000" height="1125" alt="文件导入、AI智能解析与人工复核" loading="lazy" decoding="async"></picture>
+       <figcaption class="figma-caption">文件导入、AI智能解析与人工复核</figcaption>
+      </figure>
+      <figure class="figma-figure" id="ai-association" aria-label="界面展示：内外规关联">
+       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118b-11-mobile.jpg"><img src="./assets/ai-compliance-1118b-11.jpg" width="2000" height="1125" alt="内外规关联、关联字段与匹配度" loading="lazy" decoding="async"></picture>
+       <figcaption class="figma-caption">内外规关联、关联字段与匹配度</figcaption>
+      </figure>
+      <figure class="figma-figure" id="ai-comparison" aria-label="界面展示：差距定位">
+       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118b-12-mobile.jpg"><img src="./assets/ai-compliance-1118b-12.jpg" width="2000" height="1125" alt="关联有依据，差距可定位" loading="lazy" decoding="async"></picture>
+       <figcaption class="figma-caption">关联有依据，差距可定位</figcaption>
       </figure>
       <figure class="figma-figure" id="ai-value" aria-label="设计价值与总结">
-       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118-11-mobile.jpg"><img src="./assets/ai-compliance-1118-11.jpg" width="2000" height="1125" alt="效率、准确性与管理闭环" loading="lazy" decoding="async"></picture>
-       <figcaption class="figma-caption">效率、准确性与管理闭环</figcaption>
+       <picture><source media="(max-width: 767px)" srcset="./assets/ai-compliance-1118b-13-mobile.jpg"><img src="./assets/ai-compliance-1118b-13.jpg" width="2000" height="1125" alt="让合规判断更清晰，让整改执行可追踪" loading="lazy" decoding="async"></picture>
+       <figcaption class="figma-caption">让合规判断更清晰，让整改执行可追踪</figcaption>
       </figure>
      </article>
    </section>
@@ -211,7 +234,7 @@
     </div>
    </div>
   </div>
-  <script src="./project-loading.js?v=20261118"></script>
+  <script src="./project-loading.js?v=20261118b"></script>
   <script src="./script.js?v=20261118">
   </script>
  </body>

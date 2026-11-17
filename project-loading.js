@@ -23,6 +23,7 @@
       status.textContent = '图片未加载成功，点击重试';
       status.setAttribute('role', 'button');
       status.tabIndex = 0;
+      if (!status.isConnected) figure.appendChild(status);
     };
     const retry = event => {
       event.stopPropagation();
@@ -42,6 +43,17 @@
     status.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); retry(e); } });
     img.addEventListener('load', ready);
     img.addEventListener('error', failed);
+    const pictureSource = img.parentElement.querySelector('source[media]');
+    if (pictureSource) {
+      window.matchMedia(pictureSource.media).addEventListener('change', () => {
+        if (img.loading !== 'eager') return;
+        requestAnimationFrame(() => {
+          img.decode().then(ready, () => {
+            if (img.complete && !img.naturalWidth) failed();
+          });
+        });
+      });
+    }
     if (img.complete && img.naturalWidth) ready();
     else if (img.complete) failed();
     else { figure.classList.add('media-loading'); figure.setAttribute('aria-busy', 'true'); }
