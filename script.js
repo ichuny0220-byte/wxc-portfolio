@@ -322,12 +322,22 @@ window.addEventListener("keydown", (event) => {
       tryPlay();
     };
     if ("IntersectionObserver" in window) {
+      const hero = heroVideo.closest('.hero');
+      const entrySection = document.getElementById(location.hash.slice(1));
+      let waitingForAnchor = Boolean(entrySection && !hero.contains(entrySection));
       const observer = new IntersectionObserver(entries => {
-        if (entries.some(entry => entry.isIntersecting)) {
+        if (waitingForAnchor) {
+          const reachedAnchor = entries.some(entry => entry.target === entrySection && entry.isIntersecting);
+          if (!reachedAnchor && location.hash.slice(1) === entrySection.id) return;
+          observer.unobserve(entrySection);
+          waitingForAnchor = false;
+        }
+        if (entries.some(entry => entry.target === heroVideo && entry.isIntersecting)) {
           observer.disconnect();
           startVideo();
         }
       }, { threshold: 0.2 });
+      if (waitingForAnchor) observer.observe(entrySection);
       observer.observe(heroVideo);
     } else {
       startVideo();
